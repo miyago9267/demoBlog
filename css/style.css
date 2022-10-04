@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+:root {
+    --header-height: 4rem;
+    --nav-width: 180px;
+    --first-color: #1d1d1d;
+    --first-color-light: #AFA5D9;
+    --second-color:#171717;
+    --white-color: #F7F6FB;
+    --body-font: 'Nunito', sans-serif;
+    --normal-font-size: 1rem;
+    --z-fixed: 100
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box
+}
+
+.wrap{
+    width: 1000px;
+    margin: 0 ;
+  /*     transform: scale3d(1,1,1); */
+}
+
+body {
+    background: #f1e9dd;
+    position: relative;
+    margin: var(--header-height) 0 0 0;
+    padding: 0 0rem;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    transition: .5s
+}
+
+a {
+    text-decoration: none
+}
+
+.header {
+    width: 100%;
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--first-color);
+    z-index: var(--z-fixed);
+    transition: .5s;
+}
+
+.header h1{
+    width: 0px;
+    background-repeat: no-repeat;
+    text-indent: 101%;
+    white-space: nowrap;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.header a {
+    color: -webkit-link;
+}
+
+.header_toggle {
+    content: "\eb5f";
+    color: var(--first-color);
+    font-size: 3rem;
+    cursor: pointer
+}
+
+.header_img {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden
+}
+
+.header_img img {
+    width: 40px
+}
+
+main {
+    display: block;
+}
+
+.main {
+    padding-bottom: initial;
+    padding-top: 2rem;
+}
+
+.main-inner {
+    align-items: flex-start;
+    /* display: flex; */
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin: 0 auto;
+    width: calc(100% - 20px);
+}
+
+.content-wrap {
+    background-image: initial;
+    background-color: initial;
+    box-shadow: initial;
+    box-shadow: initial;
+    padding: initial;
+    background: var(--content-bg-color);
+    border-radius: initial;
+    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 12%), 0 3px 1px -2px rgb(0 0 0 / 6%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    box-sizing: border-box;
+    padding: 40px;
+    width: calc(100% - 25px);
+}
+
+.content-wrap {
+    box-shadow: rgb(7 7 6 / 12%) 0px 2px 2px 0px, rgb(7 7 6 / 6%) 0px 3px 1px -2px, rgb(7 7 6 / 12%) 0px 1px 5px 0px;
+}
+
+.sidebar-toggle {
+    background-image: initial;
+    background-color: rgb(38, 39, 39);
+}
+
+.sidebar-toggle {
+    display: none;
+}
+
+.sidebar-toggle {
+    background: #222;
+    bottom: 45px;
+    cursor: pointer;
+    height: 14px;
+    left: 30px;
+    padding: 5px;
+    position: fixed;
+    width: 14px;
+    z-index: 1300;
+}
+
+.toggle {
+    line-height: 0;
+}
+
+.l-navbar {
+    position: fixed;
+    top: 5rem;
+    left: -0%;
+    width: var(--nav-width);
+    height: 100vh;
+    background-color: var(--second-color);
+    padding: .5rem 1rem 0 0;
+    transition: .5s;
+    z-index: var(--z-fixed)
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden
+}
+
+.nav_logo,
+.nav_link {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 1rem;
+    padding: .5rem 0 .5rem 1.5rem
+}
+
+.nav_logo {
+    margin-bottom: 2rem
+}
+
+.nav_logo-icon {
+    font-size: 1.25rem;
+    color: var(--white-color)
+}
+
+.nav_logo-name {
+    color: var(--white-color);
+    font-weight: 700
+}
+
+.nav_link {
+    position: relative;
+    color: var(--first-color-light);
+    margin-bottom: 1.5rem;
+    transition: .3s
+}
+
+.nav_link:hover {
+    color: var(--white-color)
+}
+
+.nav_icon {
+    font-size: 1.25rem
+}
+
+.show {
+    left: 0
+}
+
+.body-pd {
+    padding-left: calc(var(--nav-width) + 1rem)
+}
+
+.active {
+    color: var(--white-color)
+}
+
+.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 2px;
+    height: 32px;
+    background-color: var(--white-color)
+}
+
+.height-100 {
+    height: 100vh
+}
+
+.nav .avatar {
+    background-image: url('/images/avatar.jpg');
+}
+
+.nav .avatarbar .avatar {
+    background-image: url(../images/avatar.jpg);
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position: -50px -30px;
+    border-radius: 60%;
+    width: 100px;
+    height: 100px;
+    margin: 5;
+}
+
+.nav .avatarbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 180px;
+    height: 180px;
+    margin: 0;
+    padding: 30px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+.gXFSiw {
+    z-index: 0;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border: none;
+    background-color: rgb(67, 230, 96);
+    color: rgb(30, 35, 48);
+    transition: transform 0.15s cubic-bezier(0, 0.2, 0.5, 3) 0s;
+}
+
+.hBNyQA {
+    position: relative;
+    height: auto;
+    border-radius: 14px;
+}
+
+.kNkkWp {
+    position: relative;
+}
+
+.jHVhbx {
+    position: relative;
+}
+
+.bvgKjI {
+    position: relative;
+    hyphens: none;
+}
+
+.ldGKnQ {
+    margin: 0px;
+    border: none;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    text-align: center;
+    cursor: pointer;
+    background: none;
+    text-decoration: none;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: auto;
+    position: relative;
+    padding: 16px 20px;
+    width: 100%;
+    appearance: none;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        margin: calc(var(--header-height) + 1rem) 0 0 0;
+        padding-left: calc(var(--nav-width) + 2rem)
+    }
+
+    .header {
+        height: calc(var(--header-height) + 1rem);
+        padding: 0 0 0 3rem
+    }
+
+    .header_img {
+        width: 40px;
+        height: 40px
+    }
+
+    .header_img img {
+        width: 45px
+    }
+
+    .l-navbar {
+        left: 0;
+        padding: 1rem 1rem 0 0
+    }
+
+    .show {
+        width: calc(var(--nav-width) + 156px)
+    }
+
+    .body-pd {
+        padding-left: calc(var(--nav-width) + 188px)
+    }
+}
