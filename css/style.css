@@ -28,7 +28,7 @@ body {
     background: #f1e9dd;
     position: relative;
     margin: var(--header-height) 0 0 0;
-    padding: 0 0rem;
+    /* padding: 0 0rem; */
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     transition: .5s
@@ -41,7 +41,7 @@ a {
 .header {
     width: 100%;
     height: var(--header-height);
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     display: flex;
@@ -50,6 +50,7 @@ a {
     background-color: var(--first-color);
     z-index: var(--z-fixed);
     transition: .5s;
+    padding: 0 0 0 3rem
 }
 
 .header h1{
@@ -87,6 +88,7 @@ a {
 
 main {
     display: block;
+    text-align: center;
 }
 
 .main {
@@ -99,7 +101,7 @@ main {
     /* display: flex; */
     justify-content: center;
     flex-direction: row-reverse;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     width: calc(100% - 20px);
 }
 
@@ -107,14 +109,11 @@ main {
     background-image: initial;
     background-color: initial;
     box-shadow: initial;
-    box-shadow: initial;
-    padding: initial;
     background: var(--content-bg-color);
     border-radius: initial;
-    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 12%), 0 3px 1px -2px rgb(0 0 0 / 6%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    /* box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 12%), 0 3px 1px -2px rgb(0 0 0 / 6%), 0 1px 5px 0 rgb(0 0 0 / 12%); */
     box-sizing: border-box;
     padding: 40px;
-    width: calc(100% - 25px);
 }
 
 .content-wrap {
@@ -147,7 +146,7 @@ main {
 }
 
 .l-navbar {
-    position: fixed;
+    /* position: fixed; */
     top: 5rem;
     left: -0%;
     width: var(--nav-width);
@@ -313,11 +312,6 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-    body {
-        margin: calc(var(--header-height) + 1rem) 0 0 0;
-        padding-left: calc(var(--nav-width) + 2rem)
-    }
-
     .header {
         height: calc(var(--header-height) + 1rem);
         padding: 0 0 0 3rem
